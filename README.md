@@ -11,7 +11,7 @@ Application de bureau Python/PySide6 pour le dimensionnement automatisé des arm
 
 ## Aperçu
 
-![Capture d'écran de l'interface](screenshot.png)
+![Capture d'écran de l'interface](screenshot.jpg)
 
 L'outil prend en entrée les données géométriques et mécaniques d'un poteau, calcule la section d'armature nécessaire selon le BAEL 91, puis propose et classe automatiquement les meilleures solutions de ferraillage (nappe simple ou mixte), avec vérification des armatures transversales.
 
@@ -78,7 +78,7 @@ python V1_00_armatures_poteau_rectangulaire_PySide6.py
 
 ```
 armatures-poteau-rectangulaire/
-├── V1_00_armatures_poteau_rectangulaire_PySide6.py   # Script principal
+├── armatures_poteau_rectangulaire_V1-0-0.py           # Script principal
 ├── requirements.txt                                   # Dépendances Python
 ├── README.md                                          # Documentation
 └── LICENSE                                            # Licence MIT
