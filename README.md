@@ -11,7 +11,7 @@ Application de bureau Python/PySide6 pour le dimensionnement automatisé des arm
 
 ## Aperçu
 
-![Capture d'écran de l'interface](screenshot.jpg)
+![Capture d'écran de l'interface](Screenshot.jpg)
 
 L'outil prend en entrée les données géométriques et mécaniques d'un poteau, calcule la section d'armature nécessaire selon le BAEL 91, puis propose et classe automatiquement les meilleures solutions de ferraillage (nappe simple ou mixte), avec vérification des armatures transversales.
 
@@ -20,7 +20,7 @@ L'outil prend en entrée les données géométriques et mécaniques d'un poteau,
 ## Fonctionnalités
 
 - **Calcul de la section d'armature** — élancement, coefficient de flambement α, section réduite Br, armature minimale / théorique / maximale / retenue
-- **Optimisation multi-critères** des solutions longitudinales :
+- **Optimisation** des solutions longitudinales :
   - Nappe simple (un seul diamètre HA)
   - Nappe mixte (deux diamètres consécutifs)
   - Mode personnalisé (saisie libre)
@@ -44,7 +44,7 @@ L'outil prend en entrée les données géométriques et mécaniques d'un poteau,
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/<votre-utilisateur>/armatures-poteau-rectangulaire.git
+git clone https://github.com/Riana261-mg/Armatures-Poteau-rectangulaire-BAEL.git
 cd armatures-poteau-rectangulaire
 
 # Créer un environnement virtuel (recommandé)
@@ -55,7 +55,7 @@ source .venv/bin/activate        # Windows : .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Lancer l'application
-python V1_00_armatures_poteau_rectangulaire_PySide6.py
+python armatures_poteau_rectangulaire_V1-0-0.py
 ```
 
 ---
@@ -91,11 +91,11 @@ armatures-poteau-rectangulaire/
 ### Section d'armature longitudinale
 
 ```
-Br  = (a − 0,02) × (b − 0,02)          [section réduite, m²]
-λ   = 2√3 · lf / a                      [élancement]
-α   = 0,85 / (1 + 0,2·(λ/35)²)         si λ ≤ 50
-α   = 0,6 · (50/λ)²                     si λ > 50
-Ath = (Nu/αm − Br·fc28/1,35) · 1,15/fe [armature théorique, cm²]
+Br  = (a − 0,02) × (b − 0,02)             [section réduite, m²]
+λ   = 2√3 · lf / a                        [élancement]
+α   = 0,85 / (1 + 0,2·(λ/35)²)            si λ ≤ 50
+α   = 0,6 · (50/λ)²                       si λ > 50
+Ath = (Nu/αm − Br·fc28/1,35) · 1,15/fe    [armature théorique, cm²]
 ```
 
 ### Armatures transversales
